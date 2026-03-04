@@ -384,7 +384,7 @@ section { padding: 100px 60px; }
 .tech-section { max-width: 1100px; margin: 0 auto; }
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 56px;
 }
@@ -623,6 +623,42 @@ footer {
 .badge-offline { color: #fca5a5; border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); }
 .badge-online  { color: #86efac; border-color: rgba(34,197,94,0.3);  background: rgba(34,197,94,0.06); }
 
+/* ── BUILT WITH AI NOTE ── */
+.built-with-ai {
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.bwa-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.bwa-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.bwa-chip {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.03);
+  letter-spacing: 0.04em;
+}
+
 /* ── HAMBURGER ── */
 .hamburger {
   display: none;
@@ -723,7 +759,6 @@ footer {
   .mode-pill { font-size: 10px; }
 
   .tech-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; }
-  .tech-section { max-width: 100%; }
 
   .rules-inner { grid-template-columns: 1fr; gap: 44px; }
 
@@ -803,7 +838,7 @@ footer {
       <span class="word-product">Product</span>
     </h1>
     <p class="hero-sub">
-      A pure knowledge-exchange event where 6th semester UG students learn to build real AI-powered Flutter apps using AI agents — from a simple prompt to a working product.
+      A pure knowledge-exchange event where 6th semester UG students learn to build real Flutter mobile apps — using AI as a development tool, Firebase as the backend, and their own creativity to ship a working product.
     </p>
     <div class="hero-actions">
       <a href="https://forms.gle/uuzr4r9vFVfevcvJ8" class="btn-primary" target="_blank">Register Now — It's Free</a>
@@ -872,10 +907,10 @@ footer {
         <div class="day-label">Day One</div>
         <div class="day-title">Learn</div>
         <ul class="day-items">
-          <li>Intro to AI Agents &amp; Antigravity platform</li>
-          <li>Flutter + Firebase project setup</li>
-          <li>Integrating Claude Opus 4.6 &amp; Gemini Pro as agents</li>
-          <li>Live coding demo — build a mini AI app together</li>
+          <li>How AI tools (Claude &amp; Gemini) were used to build this Flutter app</li>
+          <li>Flutter project setup &amp; structure walkthrough</li>
+          <li>Firebase Auth &amp; Firestore integration demo</li>
+          <li>Live coding demo — understand the full app from scratch</li>
           <li>Team formation &amp; topic selection</li>
           <li>Q&amp;A session with the host</li>
         </ul>
@@ -887,7 +922,7 @@ footer {
         <div class="day-title">Build</div>
         <ul class="day-items">
           <li>Teams start building their chosen app</li>
-          <li>Integrate AI agents into Flutter app</li>
+          <li>Apply Antigravity agents in Flutter app</li>
           <li>Firebase Auth &amp; Firestore setup</li>
           <li>Start writing project documentation</li>
           <li>Mid-day progress check-in</li>
@@ -917,45 +952,48 @@ footer {
   <div class="tech-section">
     <div class="section-tag">Tech Stack</div>
     <h2 class="section-title">What You'll<br>Build With</h2>
-    <p class="section-sub">A modern, production-grade stack chosen to give you real-world experience with cutting-edge AI tools.</p>
+    <p class="section-sub">A focused, practical stack — everything you need to build a real mobile app from scratch.</p>
+
     <div class="tech-grid">
-      <div class="tech-card">
-        <div class="tech-icon">🤖</div>
-        <div class="tech-name">Antigravity Platform</div>
-        <div class="tech-desc">The AI agent framework powering the event. Learn to orchestrate intelligent agents that think, plan, and act.</div>
-        <span class="tech-tag tag-indigo">Agent Framework</span>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon">🧠</div>
-        <div class="tech-name">Claude Opus 4.6</div>
-        <div class="tech-desc">Anthropic's most capable model. Use it as a reasoning agent inside your app for complex tasks.</div>
-        <span class="tech-tag tag-purple">LLM · Anthropic</span>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon">✨</div>
-        <div class="tech-name">Gemini Pro</div>
-        <div class="tech-desc">Google's multimodal AI model. Combine with Claude for a multi-agent architecture inside your product.</div>
-        <span class="tech-tag tag-cyan">LLM · Google</span>
-      </div>
       <div class="tech-card">
         <div class="tech-icon">📱</div>
         <div class="tech-name">Flutter</div>
-        <div class="tech-desc">Build a beautiful cross-platform mobile app. Write once, run on Android &amp; iOS with native performance.</div>
+        <div class="tech-desc">Build a beautiful cross-platform mobile app using Dart. Write once, run on Android &amp; iOS with native performance. The core framework you'll use to build your product.</div>
         <span class="tech-tag tag-cyan">Mobile · Dart</span>
       </div>
       <div class="tech-card">
         <div class="tech-icon">🔐</div>
         <div class="tech-name">Firebase Auth</div>
-        <div class="tech-desc">Seamless user authentication — email, Google sign-in, and more. Secure and easy to integrate.</div>
-        <span class="tech-tag tag-green">Auth · Google</span>
+        <div class="tech-desc">Seamless user authentication — email, Google sign-in, and more. Secure, quick to set up, and easy to integrate with Flutter.</div>
+        <span class="tech-tag tag-green">Authentication</span>
       </div>
       <div class="tech-card">
         <div class="tech-icon">🗄️</div>
         <div class="tech-name">Firestore</div>
-        <div class="tech-desc">NoSQL real-time database. Store and sync your app's data with ease — no backend server needed.</div>
+        <div class="tech-desc">NoSQL real-time database by Firebase. Store and sync your app's data instantly — no backend server required.</div>
         <span class="tech-tag tag-green">Database · Firebase</span>
       </div>
+      <div class="tech-card">
+        <div class="tech-icon">🤖</div>
+        <div class="tech-name">Antigravity Platform</div>
+        <div class="tech-desc">The AI agent platform used to build this Flutter application — orchestrating intelligent agents that plan, reason, and generate code autonomously.</div>
+        <span class="tech-tag tag-indigo">Agent Platform</span>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🧠</div>
+        <div class="tech-name">Claude Opus 4.6</div>
+        <div class="tech-desc">Anthropic's most powerful model — used as an AI agent to develop this Flutter app with deep reasoning and code generation capabilities.</div>
+        <span class="tech-tag tag-purple">LLM · Anthropic</span>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">✨</div>
+        <div class="tech-name">Gemini Pro</div>
+        <div class="tech-desc">Google's multimodal AI model — used alongside Claude in a multi-agent workflow to accelerate the development of this application.</div>
+        <span class="tech-tag tag-cyan">LLM · Google</span>
+      </div>
     </div>
+
+
   </div>
 </section>
 
@@ -985,7 +1023,7 @@ footer {
           <div class="rule-num">03</div>
           <div class="rule-content">
             <div class="rule-title">Use the Stack</div>
-            <div class="rule-desc">Your app must use Flutter, Firebase, and at least one AI agent (Claude or Gemini).</div>
+            <div class="rule-desc">Your app must be built using Flutter with Firebase Auth &amp; Firestore as the backend.</div>
           </div>
         </div>
         <div class="rule-item">
@@ -1014,7 +1052,7 @@ footer {
           <div class="deliverable-icon">📱</div>
           <div class="deliverable-info">
             <div class="deliverable-title">Working Flutter App</div>
-            <div class="deliverable-desc">A functional mobile app built using AI agents, Flutter, and Firebase. Must demonstrate the chosen topic.</div>
+            <div class="deliverable-desc">A functional Flutter mobile app with Firebase Auth &amp; Firestore built around your chosen topic.</div>
           </div>
         </div>
         <div class="deliverable-card">
