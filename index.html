@@ -550,6 +550,22 @@ footer {
   line-height: 1.8;
 }
 
+/* ── BUILD NOTE ── */
+.build-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 20px;
+  background: rgba(6,182,212,0.05);
+  border: 1px solid rgba(6,182,212,0.2);
+  padding: 18px 22px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+.build-note span { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.build-note strong { color: rgba(255,255,255,0.85); display: block; margin-bottom: 3px; font-size: 14px; }
+
 /* ── SCHEDULE NOTICE BANNER ── */
 .schedule-notice {
   margin-top: 36px;
@@ -753,7 +769,7 @@ footer {
   .section-title { font-size: clamp(26px, 8vw, 38px); letter-spacing: -0.5px; }
   .timeline-header { margin-bottom: 32px; }
 
-  .timeline { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr !important; }
   .timeline-day { padding: 28px 22px; }
   .day-number { font-size: 52px; }
   .schedule-notice { padding: 18px; }
@@ -833,14 +849,14 @@ footer {
   <div class="blob blob-c"></div>
 
   <div class="hero-inner">
-    <div class="hero-badge">FITCS, Parul University · 3-Day Knowledge Event</div>
+    <div class="hero-badge">FITCS, Parul University · 2-Day Knowledge Event</div>
     <h1 class="hero-title">
       <span class="word-prompt">Prompt</span><br>
       <span class="word-to">to</span><br>
       <span class="word-product">Product</span>
     </h1>
     <p class="hero-sub">
-      A pure knowledge-exchange event where 6th semester UG students learn to build real Flutter mobile apps — using AI as a development tool, Firebase as the backend, and their own creativity to ship a working product.
+      A pure knowledge-exchange event where students learn to build real Flutter mobile apps — Day 1 is training, Day 2 is your showcase. Build, learn, and present.
     </p>
     <div class="hero-actions">
       <a href="https://forms.gle/uuzr4r9vFVfevcvJ8" class="btn-primary" target="_blank">Register Now — It's Free</a>
@@ -857,7 +873,7 @@ footer {
 <!-- STATS -->
 <div class="stats-bar">
   <div class="stat-item">
-    <div class="stat-value">3</div>
+    <div class="stat-value">2</div>
     <div class="stat-label">Days of Learning</div>
   </div>
   <div class="stat-item">
@@ -879,8 +895,8 @@ footer {
   <div class="inner">
     <div class="timeline-header">
       <div class="section-tag">Schedule</div>
-      <h2 class="section-title">3 Days,<br>One Mission</h2>
-      <p class="section-sub">Each day is designed to build on the last — from learning the foundations to shipping a real product.</p>
+      <h2 class="section-title">2 Days,<br>One Mission</h2>
+      <p class="section-sub">Day 1 is your training ground. Day 2 is your stage — build, submit, and showcase your product.</p>
 
       <!-- Schedule notice banner -->
       <div class="schedule-notice">
@@ -892,20 +908,19 @@ footer {
           </div>
         </div>
         <div class="notice-modes">
-          <div class="mode-pill mode-offline"><span>🏫</span> Day 1 — Offline (In-person)</div>
-          <div class="mode-pill mode-online"><span>💻</span> Day 2 — Online / As Required</div>
-          <div class="mode-pill mode-offline"><span>🏫</span> Final Showcase — Offline</div>
+          <div class="mode-pill mode-offline"><span>🏫</span> Day 1 — Training (Offline)</div>
+          <div class="mode-pill mode-offline"><span>🏫</span> Day 2 — Showcase (Offline)</div>
         </div>
         <div class="notice-showcase-note">
-          <span>⚠️</span> The Final Showcase date may be scheduled a few days after the project submission deadline.
+          <span>⚠️</span> Between Day 1 and the Showcase, your team will have time to build and submit the project independently.
         </div>
       </div>
     </div>
 
-    <div class="timeline">
+    <div class="timeline" style="grid-template-columns: repeat(2, 1fr);">
       <div class="timeline-day">
         <div class="day-number">01</div>
-        <div class="day-mode-badge badge-offline">🏫 Offline</div>
+        <div class="day-mode-badge badge-offline">🏫 Offline · Training</div>
         <div class="day-label">Day One</div>
         <div class="day-title">Learn</div>
         <ul class="day-items">
@@ -919,33 +934,27 @@ footer {
       </div>
       <div class="timeline-day">
         <div class="day-number">02</div>
-        <div class="day-mode-badge badge-online">💻 Online / As Required</div>
+        <div class="day-mode-badge badge-offline">🏫 Offline · Showcase</div>
         <div class="day-label">Day Two</div>
-        <div class="day-title">Build</div>
+        <div class="day-title">Showcase</div>
         <ul class="day-items">
-          <li>Teams start building their chosen app</li>
-          <li>Apply Antigravity agents in Flutter app</li>
-          <li>Firebase Auth &amp; Firestore setup</li>
-          <li>Start writing project documentation</li>
-          <li>Mid-day progress check-in</li>
-          <li>Online mentorship &amp; guidance available</li>
-        </ul>
-      </div>
-      <div class="timeline-day">
-        <div class="day-number">03</div>
-        <div class="day-mode-badge badge-offline">🏫 Offline Showcase</div>
-        <div class="day-label">Submission + Showcase</div>
-        <div class="day-title">Present</div>
-        <ul class="day-items">
-          <li>Submit code + documentation by deadline</li>
-          <li>Finalize app features &amp; polish UI</li>
-          <li>Final Showcase held offline <em style="color:rgba(255,255,255,0.3);font-size:11px;">(may be a few days after submission)</em></li>
-          <li>Each team demos their app in person</li>
-          <li>Group discussion &amp; learnings</li>
+          <li>Each team presents their working Flutter app</li>
+          <li>Submit code + project documentation</li>
+          <li>Live demo in front of the group</li>
+          <li>Group discussion &amp; peer learning</li>
+          <li>Reflect on what you built &amp; what you learned</li>
           <li>Wrap-up &amp; next steps</li>
         </ul>
       </div>
     </div>
+
+    <div class="build-note">
+      <span>🛠️</span>
+      <div>
+        <strong>Between Day 1 &amp; Day 2</strong> — Teams build their Flutter app independently, with mentorship available online as needed. Submit your app + documentation before the showcase.
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1039,7 +1048,7 @@ footer {
           <div class="rule-num">05</div>
           <div class="rule-content">
             <div class="rule-title">Document Everything</div>
-            <div class="rule-desc">Maintain a project documentation alongside your build. Submit it on Day 3.</div>
+            <div class="rule-desc">Maintain project documentation alongside your build. Submit it before the Showcase Day.</div>
           </div>
         </div>
       </div>
@@ -1048,7 +1057,7 @@ footer {
     <div>
       <div class="section-tag">Deliverables</div>
       <h2 class="section-title">What to<br>Submit</h2>
-      <p class="section-sub">By the end of Day 3, each team submits two things.</p>
+      <p class="section-sub">By Showcase Day (Day 2), each team submits and presents three things.</p>
       <div class="deliverables">
         <div class="deliverable-card">
           <div class="deliverable-icon">📱</div>
@@ -1068,7 +1077,7 @@ footer {
           <div class="deliverable-icon">🎤</div>
           <div class="deliverable-info">
             <div class="deliverable-title">Live Demo</div>
-            <div class="deliverable-desc">A short walkthrough of your app in front of the group on Day 3. Show what you built and how it works.</div>
+            <div class="deliverable-desc">A short walkthrough of your app in front of the group on Showcase Day (Day 2). Show what you built and how it works.</div>
           </div>
         </div>
       </div>
@@ -1087,7 +1096,7 @@ footer {
         <div class="host-name-large">Prof. Pritam Samanta</div>
         <div class="host-role">FITCS, Parul University · Event Host &amp; Instructor</div>
         <p class="host-bio">
-          Prof. Pritam Samanta will be your guide throughout the entire 3-day event — from the Day 1 workshop on AI agent development, to mentoring your team during the build phase. He'll be available for questions, guidance, and technical support throughout. This event is entirely organized and run by him, with a singular goal: give students hands-on experience with modern AI-powered development.
+          Prof. Pritam Samanta will be your guide throughout this 2-day event — from the Day 1 training workshop on Flutter &amp; AI-powered development, to supporting your team during the build phase. He'll be available for questions, guidance, and technical support throughout. This event is entirely organized and run by him, with a singular goal: give students hands-on experience with modern mobile development.
         </p>
       </div>
     </div>
@@ -1099,7 +1108,7 @@ footer {
   <div class="register-inner">
     <div class="section-tag" style="justify-content:center;">Register</div>
     <h2 class="section-title">Ready to Build<br>with AI?</h2>
-    <p class="section-sub">Open to all 6th semester UG students of the Faculty of Information Technology &amp; Computer Science (FITCS), Parul University. Completely free — no fees, no rewards, just learning.</p>
+    <p class="section-sub">Open to all students of the Faculty of Information Technology &amp; Computer Science (FITCS), Parul University. Completely free — no fees, no rewards, just learning.</p>
     <a href="https://forms.gle/uuzr4r9vFVfevcvJ8" class="btn-primary" target="_blank" style="font-size:16px; padding:18px 48px;">Register Now</a>
     <p class="register-note">forms.gle/uuzr4r9vFVfevcvJ8</p>
   </div>
