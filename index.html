@@ -698,13 +698,13 @@ footer {
   display: block;
   transition: color 0.2s;
 }
-.mobile-menu a:last-of-type { border-bottom: none; }
-.mobile-menu a:hover { color: white; }
+.mobile-menu a:not(.mobile-cta-m):last-of-type { border-bottom: none; }
+.mobile-menu a:not(.mobile-cta-m):hover { color: white; }
 .mobile-cta-m {
   display: block;
   margin-top: 14px;
   background: var(--indigo);
-  color: white;
+  color: white !important;
   text-align: center;
   padding: 14px;
   font-family: 'Syne', sans-serif;
@@ -712,6 +712,8 @@ footer {
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.03em;
+  opacity: 1 !important;
+  border-bottom: none !important;
 }
 
 /* ── RESPONSIVE ── */
